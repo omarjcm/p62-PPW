@@ -2,6 +2,7 @@
 
 # Universidad Politécnica Salesiana
 Carrera de Ingeniería en Ciencias de la Computación
+
 Guillermo Pizarro, gpizarro@ieee.org
 
 # Curso de Programación y Plataformas Web
