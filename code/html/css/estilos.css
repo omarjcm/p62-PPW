@@ -14,6 +14,9 @@ h1 {
     border: 1px;
     color: red;
 }
+.perfil {
+    width: 300px;
+}
 
 /* Agrupacion de selectores */
 h2, h3 {
