@@ -1,8 +1,13 @@
 * {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 h1 {
-    font-size: 26px;
+    font-size: 36px;
     color:darkblue;
+}
+
+.boton {
+    border: 1px;
+    color: red;
 }
