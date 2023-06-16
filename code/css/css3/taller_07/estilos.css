@@ -58,6 +58,12 @@ a:active.menu {
     margin: 5px;
 }
 
+.item-form-label {
+    display: block;
+    float: left;
+    width: 200px;
+}
+
 .footer {
     grid-area: footer;
 }
