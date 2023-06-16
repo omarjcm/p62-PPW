@@ -49,6 +49,13 @@ a:active.menu {
 .content {
     grid-area: content;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-form {
+    border: 1px dotted lightpink;
+    margin: 5px;
 }
 
 .footer {
