@@ -51,9 +51,12 @@ a:active.menu {
     background-color: white;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .item-form {
+    width: 400px;
     border: 1px dotted lightpink;
     margin: 5px;
 }
@@ -62,6 +65,7 @@ a:active.menu {
     display: block;
     float: left;
     width: 200px;
+    text-align: right;
 }
 
 .footer {
