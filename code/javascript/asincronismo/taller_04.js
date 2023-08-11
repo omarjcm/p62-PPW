@@ -19,6 +19,7 @@ const hablar = (nombre) => {
 const adios = (nombre) => {
     return new Promise((resolve, reject) => {
         setTimeout(function() {
+            console.log(`Adios ${nombre}.`)
             console.log(`Terminando conversacion...`)
             resolve(nombre)
         }, 1000) 

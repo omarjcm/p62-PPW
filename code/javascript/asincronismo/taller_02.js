@@ -1,8 +1,11 @@
-console.log('Primera Frase')
+console.log('Iniciando conversacion...')
 setTimeout(function() {
-    console.log('Segunda Frase')
-}, 2000)
-setTimeout(function() {
-    console.log('Tercera Frase')
+    console.log(`Hola Guillermo.`)
+}, 3000)
+setTimeout(function(){
+    console.log('bla, bla, bla...')
 }, 1000)
-console.log('Cuarta Frase')
+setTimeout(function(){
+    console.log('Adios')
+}, 1000)
+console.log('Finalizando conversacion...')
