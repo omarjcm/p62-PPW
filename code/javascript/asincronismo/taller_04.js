@@ -16,7 +16,16 @@ const hablar = (nombre) => {
     })
 }
 
+const adios = (nombre) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(function() {
+            console.log(`Terminando conversacion...`)
+            resolve(nombre)
+        }, 1000) 
+    })
+}
+
 console.log('Iniciando conversacion...')
 saludar('Guillermo')
     .then( (dato) => hablar( dato ) )
-    .then( (dato) => console.log( dato ) )
+    .then( (dato) => adios( dato ) )
