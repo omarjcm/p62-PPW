@@ -16,23 +16,12 @@ function personaje(texto) {
     contenedor.appendChild( div )
 }
 
-function cargar_datos(url_api) {
-    return new Promise((resolve, reject) => {
-        xhttp = new XMLHttpRequest()
-        xhttp.open('GET', url_api, true)
-        xhttp.onreadystatechange = function(e) {
-            if (xhttp && xhttp.readyState == 4) {
-                (xhttp.status == 200) 
-                    ? resolve(JSON.parse(xhttp.responseText)) 
-                    : reject(`[error]: ${url_api}`)
-            }
-        }
-        xhttp.send()    
-    })
-}
-
 function obtener_personaje(id) {
-    cargar_datos( `${API}${id}` )
+    return new Promise((resolve, reject) => {
+        fetch(`${API}${id}`)
+            .then((data) => resolve(data.json()))
+            .catch((error) => reject(`[error]: ${error}`))
+    })
 }
 
 obtener_personaje(1)
@@ -51,4 +40,23 @@ obtener_personaje(1)
     .then( (data) => {
         personaje(data)
         return obtener_personaje(5)
+    } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(6)
+    } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(7)
+    } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(8)
+    } )
+    .then( (data) => {
+        personaje(data)
+        return obtener_personaje(9)
+    } )
+    .then( (data) => {
+        personaje(data)
     } )
