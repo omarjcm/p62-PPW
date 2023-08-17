@@ -55,6 +55,13 @@ const invocacionSincronica = function(error, data) {
                     return console.error( error4 )
         
                 personaje( data4 )
+
+                cargar_datos( API + data.results[3].id, function(error5, data5) {
+                    if (error5)
+                        return console.error( error5 )
+            
+                    personaje( data5 )
+                } )    
             } )    
         } )    
     } )

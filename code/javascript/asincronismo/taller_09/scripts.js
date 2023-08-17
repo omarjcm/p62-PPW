@@ -16,47 +16,15 @@ function personaje(texto) {
     contenedor.appendChild( div )
 }
 
-function obtener_personaje(id) {
-    return new Promise((resolve, reject) => {
-        fetch(`${API}${id}`)
-            .then((data) => resolve(data.json()))
-            .catch((error) => reject(`[error]: ${error}`))
-    })
+async function obtener_personaje(id) {
+    try {
+        let response = await fetch(`${API}${id}`)
+        return personaje( await response.json() )
+    } catch(error) {
+        console.error(`[error]: ${error}`)
+    }
 }
 
-obtener_personaje(1)
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(2)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(3)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(4)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(5)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(6)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(7)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(8)
-    } )
-    .then( (data) => {
-        personaje(data)
-        return obtener_personaje(9)
-    } )
-    .then( (data) => {
-        personaje(data)
-    } )
+for (let i=1; i<=50; i++) {
+    obtener_personaje(i)
+}
