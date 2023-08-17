@@ -1,7 +1,5 @@
 const API = 'https://rickandmortyapi.com/api/character/'
 
-var xhttp = null
-
 function personaje(texto) {
     let div = document.createElement('div')
     let h1_texto = document.createTextNode(texto.name)
