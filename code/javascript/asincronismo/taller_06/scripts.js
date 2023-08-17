@@ -30,3 +30,4 @@ function obtener_respuesta() {
 cargar_datos(1)
 cargar_datos(2)
 cargar_datos(3)
+cargar_datos(4)
