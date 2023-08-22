@@ -25,36 +25,28 @@ function obtener_personaje(id) {
 obtener_personaje(1)
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(2)
-    } )
+        return obtener_personaje(2) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(3)
-    } )
+        return obtener_personaje(3) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(4)
-    } )
+        return obtener_personaje(4) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(5)
-    } )
+        return obtener_personaje(5) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(6)
-    } )
+        return obtener_personaje(6) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(7)
-    } )
+        return obtener_personaje(7) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(8)
-    } )
+        return obtener_personaje(8) } )
     .then( (data) => {
         personaje(data)
-        return obtener_personaje(9)
-    } )
-    .then( (data) => {
-        personaje(data)
-    } )
+        return obtener_personaje(9) } )
+    .then( (data) => personaje(data) )
+
+    
