@@ -36,3 +36,4 @@ Promise
             personaje( data[i] )
         }
     } )
+
