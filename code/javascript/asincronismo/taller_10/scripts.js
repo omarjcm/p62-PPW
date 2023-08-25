@@ -29,6 +29,7 @@ for (let i=1; i<=100; i++) {
 
 let promesas = ids.map( id => obtener_personaje(id) )
 
+// Promesas Encadenadas
 Promise
     .all( promesas )
     .then( data => {
