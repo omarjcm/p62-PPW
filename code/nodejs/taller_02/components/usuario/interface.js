@@ -17,4 +17,16 @@ routes.get('/', function(req, res){
         .catch( (error) => response.error(req, res, error, 400) )
 })
 
+routes.put('/', function(req, res){
+    controller.actualizarUsuario( req.body )
+        .then( (data) => response.success(req, res, data, 201) )
+        .catch( (error) => response.error(req, res, error, 400) )
+})
+
+routes.delete('/', function(req, res){
+    controller.eliminarUsuario( req.body )
+        .then( (data) => response.success(req, res, data, 201) )
+        .catch( (error) => response.error(req, res, error, 400) )
+})
+
 module.exports = routes
