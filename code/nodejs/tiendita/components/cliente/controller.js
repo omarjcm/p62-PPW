@@ -1,4 +1,4 @@
-const storage = require('./almacenamiento')
+const storage = require('./storage')
 
 function agregarCliente( cliente ) {
     return new Promise((resolve, reject) => {
